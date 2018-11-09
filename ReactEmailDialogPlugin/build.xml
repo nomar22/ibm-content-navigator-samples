@@ -42,7 +42,7 @@
 		  	<env key="PATH" value="${env.PATH}${shellSeparator}${npmPath}"/>
 		  </exec>
 	</target>
-	<target name="npmBuild">
+	<target name="npmBuild" depends="npmInstall,installIBMColors">
 		  <exec executable="${shellCmd}" searchpath="true" dir="./react">
 		  	<arg value="${shellParam}"/>
 		  	<arg value="npm run build"/>
